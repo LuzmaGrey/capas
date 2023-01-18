@@ -36,8 +36,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
     store: MongoStore.create({
-      mongoUrl: `mongodb://anyone:${process.env.MONGOPASS}@proyecto-final-shard-00-00.obuuu.mongodb.net:27017,proyecto-final-shard-00-01.obuuu.mongodb.net:27017,proyecto-final-shard-00-02.obuuu.mongodb.net:27017/?ssl=true&replicaSet=atlas-xzhi9f-shard-0&authSource=admin&retryWrites=true&w=majority`,
-      mongoOptions: advancedOptions,
+      mongoUrl: `mongodb://anyone:${process.env.MONGOPASS}
+      @ecommerce-00-00.obuuu.mongodb.net:27017,
+      ecommerce-00-01.obuuu.mongodb.net:27017,
+      ecommerce-00-02.obuuu.mongodb.net:27017/?ssl=true&replicaSet=atlas-vzhi8e-shard-0&authSource=admin&retryWrites=true&w=majority`,
+
+      mongoOptions: advancedOptions,git commit -m "first commit"
+        git branch -M main
+        git remote add origin https://github.com/LuzmaGrey/capas.git
+        git push -u origin main
     }),
     secret: process.env.SECRETKEY,
     resave: false,
